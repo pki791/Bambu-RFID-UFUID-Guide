@@ -127,7 +127,7 @@ Proxmark z AliExpress ma zwykle stare oprogramowanie. Trzeba wgrać nowe, żeby 
 1. Wejdź na [Bambu-Lab-RFID-Library](https://github.com/queengooborg/Bambu-Lab-RFID-Library).
 2. Klikaj po folderach: **materiał** (np. `PLA`) → **wariant** (np. `PLA Basic`) → **kolor** (np. `Black`).
 3. W folderze koloru znajdziesz plik z rozszerzeniem **`.bin`** (czasem kilka — z różnych szpul; wybierz dowolny). Kliknij w niego, a potem przycisk **Download** (ikona pobierania po prawej stronie).
-4. Zapisz plik w prostym miejscu, np. `C:\proxmark3\tagi\pla_basic_black.bin`. *(Znowu: bez spacji i polskich znaków w ścieżce.)*
+4. Zapisz plik w podfolderze **`client`** rozpakowanego Proxmarka, np. `C:\proxmark3\client\tagi\pla_basic_black.bin`. Proxmark odczytuje pliki **tylko z folderu `client`** (i jego podfolderów) — plik zapisany gdzie indziej nie zostanie znaleziony. *(Znowu: bez spacji i polskich znaków w ścieżce.)*
 
 > Nie ma Twojego koloru? Wybierz najbliższy kolor tego samego typu materiału — drukarka i tak przede wszystkim rozpoznaje **typ filamentu** i ustawia pod niego profil. Kolor jest wyświetlany tylko poglądowo.
 
@@ -154,10 +154,10 @@ W wyniku szukaj informacji o **magic** / **Gen 4 UFUID** — to potwierdza, że 
 ### Krok 4.2 — Zapisz dane na tag
 
 ```
-hf mf cload -f C:\proxmark3\tagi\pla_basic_black.bin
+hf mf cload -f tagi\pla_basic_black.bin
 ```
 
-Zamiast `C:\proxmark3\tagi\pla_basic_black.bin` wpisz ścieżkę do swojego pliku `.bin`. Zapis trwa kilka sekund. Na końcu powinien pojawić się komunikat o powodzeniu.
+Zamiast `tagi\pla_basic_black.bin` wpisz nazwę swojego pliku `.bin`. Ścieżkę podajesz **względem folderu `client`** — jeśli plik leży w `C:\proxmark3\client\tagi\`, wpisujesz tylko `tagi\nazwa_pliku.bin`. Zapis trwa kilka sekund. Na końcu powinien pojawić się komunikat o powodzeniu.
 
 📷 *[tu zrzut ekranu: wynik `hf mf cload`]*
 
@@ -230,7 +230,7 @@ Włóż szpulę do AMS — po chwili w Bambu Studio / Handy powinien pojawić si
 | `pm3.bat` pisze, że nie znajduje urządzenia | Inny kabel USB, inny port USB. Sprawdź w Menedżerze urządzeń, czy port COM jest widoczny. Ewentualnie uruchom `pm3.bat` z parametrem portu: `pm3.bat -p COM5`. |
 | Flashowanie się nie udaje / błąd o pamięci 256K | Twój Proxmark ma tylko 256 KB pamięci. Nowoczesny Iceman się nie zmieści. Kup egzemplarz z 512 KB. |
 | `hf mf info` nic nie widzi | Tag leży na złej antenie (ma być HF, górna), tag się przesunął, albo tag leży na metalu. Unieś go o kilka mm lub podłóż kartkę. |
-| `hf mf cload` zgłasza błąd | Sprawdź ścieżkę do pliku (bez spacji / polskich znaków) i czy tag jest typu UFUID (`hf mf info`). |
+| `hf mf cload` zgłasza błąd / nie znajduje pliku | Plik `.bin` musi leżeć w folderze `client` (np. `C:\proxmark3\client\tagi\`), a ścieżkę podajesz względem tego folderu. Sprawdź też, czy w ścieżce nie ma spacji / polskich znaków i czy tag jest typu UFUID (`hf mf info`). |
 | AMS nie rozpoznaje szpuli | Tag przyklejony za daleko od osi szpuli, albo tag nie został zapieczętowany i AMS go zniszczył (patrz [punkt 5](#5-zapieczętowanie-tagu-obowiązkowe)). |
 | Tag po AMS przestał odpowiadać na `hf mf info` | Tag został włożony niezapieczętowany — jest uszkodzony trwale. Weź nowy i tym razem zapieczętuj. |
 
