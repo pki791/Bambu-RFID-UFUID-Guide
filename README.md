@@ -196,13 +196,15 @@ Zamiast `02543828` wpisz UID folderu, który skopiowałeś(-aś) w [punkcie 3](#
 hf mf info
 ```
 
-Numer **UID** wyświetlony przez to polecenie powinien być taki sam jak nazwa folderu / pliku, który zapisałeś(-aś) (np. `02543828`). Dodatkowo możesz zgrać całą zawartość tagu i porównać ją z plikiem:
+Numer **UID** wyświetlony przez to polecenie powinien być taki sam jak nazwa folderu / pliku, który zapisałeś(-aś) (np. `02543828`). Dodatkowo możesz odczytać całą zawartość tagu i porównać ją z plikiem — do tego potrzebny jest plik `-key.bin` z tego samego folderu (dlatego kopiowaliśmy wszystkie pliki):
 
 ```
-hf mf dump --ns
+hf mf dump --ns -f \tagi\02543828\hf-mf-02543828-dump.bin -k \tagi\02543828\hf-mf-02543828-key.bin
 ```
 
-Jeśli UID się zgadza — przechodzisz do pieczętowania. **Nie wkładaj jeszcze tagu do AMS!**
+Zamiast `02543828` wpisz UID swojego tagu (w trzech miejscach). Polecenie powinno odczytać wszystkie sektory bez błędów.
+
+Jeśli UID się zgadza i odczyt przeszedł bez błędów — przechodzisz do pieczętowania. **Nie wkładaj jeszcze tagu do AMS!**
 
 ---
 
