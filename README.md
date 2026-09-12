@@ -43,7 +43,7 @@ Przykładowa aukcja na AliExpress (wersja **512M**, ok. 140 zł):
 - **Przetestowane i działające:** [neven7.eu — 30 mm UFUID RFID coin](https://www.neven7.eu/p/30mm-ufuid-rfid-coin)
   - *25 mm UFUID RFID token with Anti-Metal Layer | On-Metal Tag for Asset Tracking*
   - *30 mm white UFUID RFID coin, token with anti-metal layer for reliable tracking on metal surfaces*
-- **Ile:** jedna szpula = **jeden tag** (jak w oryginale). Każdy tag da się zaprogramować **tylko raz** (patrz [punkt 5](#5-zapieczętowanie-tagu-obowiązkowe)), więc kup zapas — szczególnie na pierwsze próby.
+- **Ile:** jedna szpula = **jeden tag**. Każdy tag da się zaprogramować **tylko raz** (patrz [punkt 5](#5-zapieczętowanie-tagu-obowiązkowe)), więc kup zapas — szczególnie na pierwsze próby.
 
 > **Tańsze tagi z AliExpress?**
 > Możliwe, że będą działać też tańsze tagi UFUID z AliExpress, ale **nie zostało to jeszcze sprawdzone** (są dopiero zamówione). Do czasu potwierdzenia bezpiecznym wyborem są tagi z neven7.eu podane wyżej. Jeśli sam(a) przetestujesz inne — daj znać, uzupełnimy instrukcję.
