@@ -180,7 +180,7 @@ hf mf info
 
 W wyniku szukaj informacji o **magic** / **Gen 4 UFUID** — to potwierdza, że tag jest właściwego typu i da się zapisać. Jeśli widzisz `Gen 1a`, `Gen 2` lub brak informacji o magic — to nie jest tag UFUID i **nie zadziała z AMS**.
 
-📷 *[tu zrzut ekranu: wynik `hf mf info` na pustym tagu UFUID]*
+📷 *[tu dodamy zrzut ekranu gdy przyjdzie przesyłka z kolejnymi tagami: wynik `hf mf info` na pustym tagu UFUID]*
 
 ### Krok 4.2 — Zapisz dane na tag
 
@@ -190,7 +190,7 @@ hf mf cload -f tagi\02543828\hf-mf-02543828-dump.bin
 
 Zamiast `02543828` wpisz UID folderu, który skopiowałeś(-aś) w [punkcie 3](#3-pobranie-plików-z-danymi-filamentu). Ścieżkę podajesz **względem folderu `C:\ProxSpace\client\`** — jeśli plik leży w `C:\ProxSpace\client\tagi\02543828\`, wpisujesz tylko `tagi\02543828\hf-mf-02543828-dump.bin`. Zapis trwa kilka sekund. Na końcu powinien pojawić się komunikat o powodzeniu.
 
-📷 *[tu zrzut ekranu: wynik `hf mf cload`]*
+📷 *[tu dodamy zrzut ekranu gdy przyjdzie przesyłka z kolejnymi tagami: wynik `hf mf cload`]*
 
 ### Krok 4.3 — Sprawdź, czy zapis się udał
 
@@ -252,7 +252,7 @@ Nie testuj niezapieczętowanego tagu w AMS "na próbę".
 - Warstwa anti-metal pozwala przykleić go także na szpule z metalowymi elementami, ale i tak unikaj kładzenia go bezpośrednio na metalu, jeśli nie musisz.
 - Jeśli używasz szpul wielorazowych Bambu (z dwóch połówek), przyklej tag na jednej połówce w standardowym miejscu.
 
-📷 *[tu zdjęcie: tag przyklejony na szpuli]*
+![tag przyklejony na szpuli](tag_na_szpuli.jpg)
 
 Włóż szpulę do AMS — po chwili w Bambu Studio / Handy powinien pojawić się rozpoznany filament (typ i kolor).
 
