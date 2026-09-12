@@ -247,5 +247,7 @@ Cała ciężka robota (skanowanie tagów, reverse-engineering formatu, pełna do
 
 Ten dokument to tylko skrót "do roboty" dla konkretnego, przetestowanego typu tagów (UFUID).
 
+Podziękowania dla [Alana Kędzierskiego](https://www.facebook.com/Alan.Kedz89/) (Facebook) za zmotywowanie do napisania tej instrukcji.
+
 Tagi testowane w praktyce: [25 mm i 30 mm UFUID RFID coin, anti-metal — neven7.eu](https://www.neven7.eu/p/30mm-ufuid-rfid-coin).
 Programator: Proxmark3 (Easy) z AliExpress, ok. 120–150 zł.
