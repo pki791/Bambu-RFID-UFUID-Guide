@@ -33,7 +33,9 @@ To jest skrócona wersja dwóch oryginalnych projektów — jeśli czegoś tu za
   - Wybierz wersję z pamięcią **512 KB** (procesor `AT91SAM7S512`). Część tańszych egzemplarzy ma tylko 256 KB i **nie da się na nie wgrać** nowoczesnego oprogramowania Iceman, które jest potrzebne w tej instrukcji. Jeśli w opisie aukcji nie ma informacji o pamięci, zapytaj sprzedawcę lub wybierz ofertę, która wyraźnie pisze "512K".
   - W zestawie powinien być kabel USB. Wygląda to jak dwie płytki (anteny) złożone razem, z gniazdem USB z boku.
 
-📷 *[tu zrzut ekranu / zdjęcie: przykładowa aukcja i sam programator]*
+Przykładowa aukcja na AliExpress (wersja **512M**, ok. 140 zł):
+
+![Proxmark3 na AliExpress](proxmark3-aliexpress.jpg)
 
 ### Tagi — monety UFUID
 
@@ -72,9 +74,11 @@ Najprościej obejrzeć jeden z filmów (po angielsku, ale wszystko widać na ekr
 1. Wejdź na [proxmarkbuilds.org](https://www.proxmarkbuilds.org/).
 2. Pobierz paczkę **"RRG / Iceman — generic (Easy, RDV1, RDV2, RDV3)"** — to wersja dla Proxmark3 Easy. *(Nie pobieraj wersji "RDV4" — to inny sprzęt.)*
 3. Rozpakuj archiwum (to plik `.7z` — jeśli Windows go nie otwiera, zainstaluj darmowy [7-Zip](https://www.7-zip.org/)).
-4. Rozpakowany folder umieść w miejscu **bez spacji i polskich znaków w ścieżce**, np. `C:\proxmark3\`. *(Folder typu `C:\Users\Jan Kowalski\Pulpit\...` może nie zadziałać.)*
+4. Rozpakowany folder umieść w miejscu **bez spacji i polskich znaków w ścieżce**, np. `C:\ProxSpace\`. *(Folder typu `C:\Users\Jan Kowalski\Pulpit\...` może nie zadziałać.)*
 
-📷 *[tu zrzut ekranu: strona proxmarkbuilds.org z zaznaczonym linkiem do pobrania]*
+Na stronie kliknij link oznaczony jako **Recommended** — "Latest RRG / Iceman generic build for Proxmark3 devices (non RDV4)":
+
+![Link do pobrania na proxmarkbuilds.org](proxmark3-download-link.jpg)
 
 **Krok 2.2 — Podłącz Proxmark3 i sprawdź port**
 
@@ -90,7 +94,7 @@ Jeśli nic się nie pojawia: spróbuj innego kabla USB (niektóre kable są "tyl
 
 Proxmark z AliExpress ma zwykle stare oprogramowanie. Trzeba wgrać nowe, żeby działały polecenia z tej instrukcji.
 
-1. Wejdź do rozpakowanego folderu (np. `C:\proxmark3\`).
+1. Wejdź do rozpakowanego folderu (np. `C:\ProxSpace\`).
 2. Uruchom (dwuklik) plik **`pm3-flash-all.bat`**.
 3. Poczekaj, aż w oknie pojawi się informacja o zakończeniu (`Have a nice day!` lub podobna). **Nie odłączaj urządzenia w trakcie!**
 4. Jeśli program prosi o wciśnięcie przycisku na urządzeniu — na Proxmark3 Easy jest mały przycisk na płytce; wciśnij i przytrzymaj go podczas podłączania kabla USB, potem uruchom flashowanie ponownie.
@@ -127,7 +131,7 @@ Proxmark z AliExpress ma zwykle stare oprogramowanie. Trzeba wgrać nowe, żeby 
 1. Wejdź na [Bambu-Lab-RFID-Library](https://github.com/queengooborg/Bambu-Lab-RFID-Library).
 2. Klikaj po folderach: **materiał** (np. `PLA`) → **wariant** (np. `PLA Basic`) → **kolor** (np. `Black`).
 3. W folderze koloru znajdziesz plik z rozszerzeniem **`.bin`** (czasem kilka — z różnych szpul; wybierz dowolny). Kliknij w niego, a potem przycisk **Download** (ikona pobierania po prawej stronie).
-4. Zapisz plik w podfolderze **`client`** rozpakowanego Proxmarka, np. `C:\proxmark3\client\tagi\pla_basic_black.bin`. Proxmark odczytuje pliki **tylko z folderu `client`** (i jego podfolderów) — plik zapisany gdzie indziej nie zostanie znaleziony. *(Znowu: bez spacji i polskich znaków w ścieżce.)*
+4. Zapisz plik w podfolderze **`client`** rozpakowanego Proxmarka, np. `C:\ProxSpace\client\tagi\pla_basic_black.bin`. Proxmark odczytuje pliki **tylko z folderu `client`** (i jego podfolderów) — plik zapisany gdzie indziej nie zostanie znaleziony. *(Znowu: bez spacji i polskich znaków w ścieżce.)*
 
 > Nie ma Twojego koloru? Wybierz najbliższy kolor tego samego typu materiału — drukarka i tak przede wszystkim rozpoznaje **typ filamentu** i ustawia pod niego profil. Kolor jest wyświetlany tylko poglądowo.
 
@@ -157,7 +161,7 @@ W wyniku szukaj informacji o **magic** / **Gen 4 UFUID** — to potwierdza, że 
 hf mf cload -f tagi\pla_basic_black.bin
 ```
 
-Zamiast `tagi\pla_basic_black.bin` wpisz nazwę swojego pliku `.bin`. Ścieżkę podajesz **względem folderu `client`** — jeśli plik leży w `C:\proxmark3\client\tagi\`, wpisujesz tylko `tagi\nazwa_pliku.bin`. Zapis trwa kilka sekund. Na końcu powinien pojawić się komunikat o powodzeniu.
+Zamiast `tagi\pla_basic_black.bin` wpisz nazwę swojego pliku `.bin`. Ścieżkę podajesz **względem folderu `client`** — jeśli plik leży w `C:\ProxSpace\client\tagi\`, wpisujesz tylko `tagi\nazwa_pliku.bin`. Zapis trwa kilka sekund. Na końcu powinien pojawić się komunikat o powodzeniu.
 
 📷 *[tu zrzut ekranu: wynik `hf mf cload`]*
 
@@ -230,7 +234,7 @@ Włóż szpulę do AMS — po chwili w Bambu Studio / Handy powinien pojawić si
 | `pm3.bat` pisze, że nie znajduje urządzenia | Inny kabel USB, inny port USB. Sprawdź w Menedżerze urządzeń, czy port COM jest widoczny. Ewentualnie uruchom `pm3.bat` z parametrem portu: `pm3.bat -p COM5`. |
 | Flashowanie się nie udaje / błąd o pamięci 256K | Twój Proxmark ma tylko 256 KB pamięci. Nowoczesny Iceman się nie zmieści. Kup egzemplarz z 512 KB. |
 | `hf mf info` nic nie widzi | Tag leży na złej antenie (ma być HF, górna), tag się przesunął, albo tag leży na metalu. Unieś go o kilka mm lub podłóż kartkę. |
-| `hf mf cload` zgłasza błąd / nie znajduje pliku | Plik `.bin` musi leżeć w folderze `client` (np. `C:\proxmark3\client\tagi\`), a ścieżkę podajesz względem tego folderu. Sprawdź też, czy w ścieżce nie ma spacji / polskich znaków i czy tag jest typu UFUID (`hf mf info`). |
+| `hf mf cload` zgłasza błąd / nie znajduje pliku | Plik `.bin` musi leżeć w folderze `client` (np. `C:\ProxSpace\client\tagi\`), a ścieżkę podajesz względem tego folderu. Sprawdź też, czy w ścieżce nie ma spacji / polskich znaków i czy tag jest typu UFUID (`hf mf info`). |
 | AMS nie rozpoznaje szpuli | Tag przyklejony za daleko od osi szpuli, albo tag nie został zapieczętowany i AMS go zniszczył (patrz [punkt 5](#5-zapieczętowanie-tagu-obowiązkowe)). |
 | Tag po AMS przestał odpowiadać na `hf mf info` | Tag został włożony niezapieczętowany — jest uszkodzony trwale. Weź nowy i tym razem zapieczętuj. |
 
