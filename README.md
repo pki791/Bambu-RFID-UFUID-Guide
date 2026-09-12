@@ -160,7 +160,9 @@ Proxmark odczytuje pliki **tylko z folderu `C:\ProxSpace\client\`** (i jego podf
 
 > Nie ma Twojego koloru? Wybierz najbliższy kolor tego samego typu materiału — drukarka i tak przede wszystkim rozpoznaje **typ filamentu** i ustawia pod niego profil. Kolor jest wyświetlany tylko poglądowo.
 
-📷 *[tu zrzut ekranu: GitHub — przycisk Code → Download ZIP]*
+Tak wygląda pobieranie całej biblioteki (przycisk **Code** → **Download ZIP**):
+
+![Pobieranie biblioteki jako ZIP](downloading-repo.jpg)
 
 ---
 
