@@ -68,7 +68,7 @@ Przetestowane i działające w AMS są **dwa rodzaje** tagów. Wybierz jeden (al
 | Komenda zapisu | `hf mf cload` | `hf mf restore --force` |
 | Działa w AMS | ✅ | ✅ |
 
-- **Ile:** jedna szpula = **jeden tag** (jak w oryginale). Dotyczy obu rodzajów: każdy tag da się zaprogramować **tylko raz**, więc kup zapas — szczególnie na pierwsze próby.
+- **Ile:** jedna szpula = **jeden tag**. Dotyczy obu rodzajów: każdy tag da się zaprogramować **tylko raz**, więc kup zapas — szczególnie na pierwsze próby.
 
 > **Dlaczego UFUID / FUID, a nie zwykłe tagi "magic"?**
 > Tagi Gen1 i Gen2 (najpopularniejsze "magic card") **nie działają z AMS**. Tagi **UFUID** dają się zapisać, a potem "zapieczętować" — po zapieczętowaniu zachowują się dokładnie jak oryginalny, jednorazowy tag Bambu i AMS je akceptuje. Tagi **FUID** blokują się same w momencie zapisu nowego UID, więc od razu wyglądają jak oryginał i AMS ich nie niszczy.
@@ -202,7 +202,7 @@ hf mf info
 
 **Tag UFUID (opcja A):** w wyniku szukaj informacji o **magic** / **Gen 4 UFUID** — to potwierdza, że tag jest właściwego typu i da się zapisać. Jeśli widzisz `Gen 1a`, `Gen 2` lub brak informacji o magic — to nie jest tag UFUID i **nie zadziała z AMS**.
 
-📷 *[tu zrzut ekranu: wynik `hf mf info` na pustym tagu UFUID]*
+📷 *[tu dodamy zrzut ekranu gdy przyjdzie przesyłka z kolejnymi tagami: wynik `hf mf info` na pustym tagu UFUID]*
 
 **Tag FUID (opcja B):** pusty, fabryczny tag FUID ma domyślny UID **`AA 55 C3 96`**. Jeśli widzisz inny UID — tag był już zapisany i jest zablokowany na stałe; nie da się go użyć, weź inny.
 
@@ -220,7 +220,7 @@ hf mf cload -f tagi\02543828\hf-mf-02543828-dump.bin
 
 Zapis trwa kilka sekund. Na końcu powinien pojawić się komunikat o powodzeniu. Po zapisie tag jest **nadal odblokowany** — pieczętujesz go w [punkcie 5](#5-zapieczętowanie-tagu-ufuid-obowiązkowe-dla-ufuid).
 
-📷 *[tu zrzut ekranu: wynik `hf mf cload`]*
+📷 *[tu dodamy zrzut ekranu gdy przyjdzie przesyłka z kolejnymi tagami: wynik `hf mf cload`]*
 
 #### Krok 4.2b — tag FUID (AliExpress)
 
@@ -299,7 +299,7 @@ Nie testuj niezapieczętowanego tagu w AMS "na próbę".
 - Monety UFUID z neven7.eu mają warstwę anti-metal, która pozwala przykleić je także na szpule z metalowymi elementami — ale i tak unikaj kładzenia tagu bezpośrednio na metalu, jeśli nie musisz. Tagi FUID z AliExpress **nie mają** zadeklarowanej warstwy anti-metal, więc ich na pewno nie kładź bezpośrednio na metalu.
 - Jeśli używasz szpul wielorazowych Bambu (z dwóch połówek), przyklej tag na jednej połówce w standardowym miejscu.
 
-📷 *[tu zdjęcie: tag przyklejony na szpuli]*
+![tag przyklejony na szpuli](tag_na_szpuli.jpg)
 
 Włóż szpulę do AMS — po chwili w Bambu Studio / Handy powinien pojawić się rozpoznany filament (typ i kolor).
 
@@ -330,8 +330,6 @@ Cała ciężka robota (skanowanie tagów, reverse-engineering formatu, pełna do
 - [proxmarkbuilds.org](https://www.proxmarkbuilds.org/) — gotowe paczki dla Windows.
 
 Ten dokument to tylko skrót "do roboty" dla dwóch konkretnych, przetestowanych typów tagów (UFUID i FUID).
-
-Podziękowania dla [Alana Kędzierskiego](https://www.facebook.com/Alan.Kedz89/) (Facebook) za zmotywowanie do napisania tej instrukcji.
 
 Tagi UFUID testowane w praktyce: [25 mm i 30 mm UFUID RFID coin, anti-metal — neven7.eu](https://www.neven7.eu/p/30mm-ufuid-rfid-coin).
 Tagi FUID testowane w praktyce: [5 sztuk/partia FUID Tag jednorazowy UID zmienny blok 0 zapisywalny 13.56Mhz — AliExpress](https://a.aliexpress.com/_ExY0f1M), poniżej 3 zł/szt.
