@@ -206,7 +206,7 @@ hf mf info
 
 **Tag FUID (opcja B):** pusty, fabryczny tag FUID ma domyślny UID **`AA 55 C3 96`**. Jeśli widzisz inny UID — tag był już zapisany i jest zablokowany na stałe; nie da się go użyć, weź inny.
 
-📷 *[tu zrzut ekranu: wynik `hf mf info` na pustym tagu FUID — UID AA55C396]*
+![hf mf info fuid](fuidinfo.png)*
 
 ### Krok 4.2 — Zapisz dane na tag
 
@@ -232,7 +232,7 @@ Potrzebne są **oba pliki** z folderu tagu: `-dump.bin` (dane) i `-key.bin` (klu
 
 > ⚠️ **Ten zapis jest jednorazowy i ostateczny.** W momencie zapisania nowego UID tag FUID blokuje się sam i nie da się go już zmienić. Zanim wciśniesz Enter, sprawdź dwa razy, czy ścieżki wskazują na właściwy folder UID (ten filament, którego chcesz). Pieczętowanie ([punkt 5](#5-zapieczętowanie-tagu-ufuid-obowiązkowe-dla-ufuid)) **nie jest potrzebne** dla FUID.
 
-📷 *[tu zrzut ekranu: wynik `hf mf restore --force` na tagu FUID]*
+![hf mf restore wynik](fuidwynik.png)
 
 ### Krok 4.3 — Sprawdź, czy zapis się udał
 
