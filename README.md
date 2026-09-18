@@ -206,7 +206,7 @@ hf mf info
 
 **Tag FUID (opcja B):** pusty, fabryczny tag FUID ma domyślny UID **`AA 55 C3 96`**. Jeśli widzisz inny UID — tag był już zapisany i jest zablokowany na stałe; nie da się go użyć, weź inny.
 
-![hf mf info fuid](fuidinfo.png)*
+![hf mf info fuid](fuidinfo.jpg)*
 
 ### Krok 4.2 — Zapisz dane na tag
 
